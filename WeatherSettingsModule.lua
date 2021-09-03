@@ -1,4 +1,4 @@
-Settings {}
+local Settings {}
 
 Settings.CloudSize = {
     Min = 0,
@@ -10,7 +10,9 @@ Settings.ChanceOfCloud = {
     MaxWait = 0,
 }
 
-
-
+function Settings.CreateCloud()
+    local Cloud = instance.new('Part')
+    Cloud.Size = Vector3.New()
+end
 
 return Settings
