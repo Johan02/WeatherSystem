@@ -12,7 +12,12 @@ Settings.ChanceOfCloud = {
 
 function Settings.CreateCloud()
     local Cloud = Instance.new('Part')
-    Cloud.Size = Vector3.New()
+    local RandomX = math.random(Settings.CloudSize.Min, Settings.CloudSize.Max)
+    local RandomZ = math.random(Settings.CloudSize.Min, Settings.CloudSize.Max)
+
+    Cloud.Size = Vector3.New(RandomX, 2, RandomZ)
+
+    return Cloud
 end
 
 return Settings
