@@ -47,7 +47,7 @@ function Settings.ChooseWeatherType()
         end
     end
 
-    return math.random(1, #TableChance)
+    return TableChance[math.random(1, #TableChance)]
 end
 
 function Settings.CreateCloud(Type)
